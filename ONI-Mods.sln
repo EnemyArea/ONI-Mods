@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeyserFix", "GeyserFix\GeyserFix.csproj", "{EE8F9D20-0B09-46F0-BC6E-1715270919E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthanolGeyser", "EthanolGeyser\EthanolGeyser.csproj", "{025E7F68-E65D-4E4D-9E28-16263DD2E91A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE8F9D20-0B09-46F0-BC6E-1715270919E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8F9D20-0B09-46F0-BC6E-1715270919E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8F9D20-0B09-46F0-BC6E-1715270919E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8F9D20-0B09-46F0-BC6E-1715270919E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A891E594-F383-4A36-B723-E43117F7F1B4}
+	EndGlobalSection
+EndGlobal
