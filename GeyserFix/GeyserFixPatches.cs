@@ -2,7 +2,8 @@
 
 using System.Collections.Generic;
 using System.IO;
-using Harmony;
+using System.Reflection;
+using HarmonyLib;
 using Newtonsoft.Json;
 
 #endregion
@@ -15,10 +16,10 @@ namespace GeyserFix
     {
         private static void Postfix(List<GeyserGenericConfig.GeyserPrefabParams> __result)
         {
-            var fullPath = Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(typeof(GeyserGenPath)).Location);
+            var fullPath = Path.GetDirectoryName(Assembly.GetAssembly(typeof(GeyserGenPath)).Location);
             var geyserConfigFile = File.ReadAllText(Path.Combine(fullPath, "geyserConfig.json"));
             var geyserToRemove = JsonConvert.DeserializeObject<string[]>(geyserConfigFile);
-            
+
             foreach (var geyser in geyserToRemove)
                 __result.RemoveAll(x => x.anim == geyser);
         }
