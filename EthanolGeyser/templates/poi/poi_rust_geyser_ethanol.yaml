@@ -1,31 +1,31 @@
-name: poi_Dirt_geyser_ethanol
+name: poi_Fossil_geyser_ethanol
 info:
   size:
     X: 20
     Y: 16
   area: 247
 cells:
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.200012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -1
   location_y: 8
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.200012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_y: 8
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.200012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: 1
   location_y: 8
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.200012
   diseaseName: FoodPoisoning
@@ -57,12 +57,12 @@ cells:
   temperature: 265.439056
   location_x: 6
   location_y: 4
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.59848
   location_x: 7
   location_y: 4
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.527985
   location_x: 8
@@ -92,7 +92,7 @@ cells:
   temperature: 265.299988
   location_x: 7
   location_y: 5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.447205
   location_x: 8
@@ -122,87 +122,87 @@ cells:
   temperature: 265.405548
   location_x: 7
   location_y: 6
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.402496
   location_x: 8
   location_y: 6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.200012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: 3
   location_y: 7
-- element: Dirt
+- element: Fossil
   mass: 250.108948
   temperature: 265.306885
   location_x: 4
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 2202.9646
   temperature: 265.354309
   location_x: 5
   location_y: 7
-- element: Dirt
+- element: Fossil
   mass: 250.741333
   temperature: 265.37149
   location_x: 6
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.381683
   location_x: 7
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.363281
   location_x: 8
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.454041
   location_x: 8
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.601746
   location_x: 8
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.238312
   location_x: 9
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.700012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: 9
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.700012
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: 9
   location_y: 1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.418152
   location_x: 9
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.682068
   location_x: -4
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.738495
   location_x: -3
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.409882
   location_x: -2
@@ -212,56 +212,56 @@ cells:
   temperature: 262.571594
   location_x: -1
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 263.356689
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.352692
   location_x: 1
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.215942
   location_x: 2
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.305847
   location_x: 3
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.275848
   location_x: 4
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.302826
   location_x: 5
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.354767
   location_x: 6
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.270905
   location_x: 7
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.253235
   location_x: 8
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.174194
   location_x: 9
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.624237
   location_x: -4
@@ -306,22 +306,22 @@ cells:
   temperature: 265.311951
   location_x: 4
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.356415
   location_x: 5
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.438477
   location_x: 6
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.371246
   location_x: 7
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.319122
   location_x: 8
@@ -391,31 +391,31 @@ cells:
   temperature: 264.496429
   location_x: -4
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 263.579895
   location_x: -3
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 264.356171
   location_x: -2
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.104889
   location_x: -1
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.24823
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.31601
   location_x: 1
   location_y: 1
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.352417
   location_x: 2
@@ -455,53 +455,53 @@ cells:
   temperature: 265.374817
   location_x: 8
   location_y: 1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.297577
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -4
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.567719
   location_x: -3
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.262512
   location_x: -2
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.157684
   location_x: -1
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.263397
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.387817
   location_x: 1
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.412872
   location_x: 2
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.479919
   location_x: 3
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.603546
   location_x: 4
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.691223
   location_x: 5
@@ -521,12 +521,12 @@ cells:
   temperature: 265.02066
   location_x: -4
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.516937
   location_x: -3
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.489075
   location_x: -2
@@ -558,7 +558,7 @@ cells:
   diseaseCount: -34
   location_x: 2
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.594421
   location_x: 3
@@ -583,7 +583,7 @@ cells:
   temperature: 265.2995
   location_x: 7
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.419159
   location_x: 9
@@ -622,7 +622,7 @@ cells:
   temperature: 265.299866
   location_x: 2
   location_y: 4
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.486542
   location_x: 9
@@ -661,17 +661,17 @@ cells:
   temperature: 265.299896
   location_x: 2
   location_y: 5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.454865
   location_x: 9
   location_y: 5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.410553
   location_x: -4
   location_y: 6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.509827
   location_x: -3
@@ -700,12 +700,12 @@ cells:
   temperature: 265.299896
   location_x: 2
   location_y: 6
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.310181
   location_x: 9
   location_y: 6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.590088
   location_x: -2
@@ -729,17 +729,17 @@ cells:
   temperature: 265.299896
   location_x: 2
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.577972
   location_x: -2
   location_y: 8
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.55072
   location_x: -3
   location_y: 7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.799713
   location_x: -5
@@ -773,12 +773,12 @@ cells:
   temperature: 265.326019
   location_x: -5
   location_y: 5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.499542
   location_x: -5
   location_y: 6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.915192
   location_x: -6
@@ -807,7 +807,7 @@ cells:
   temperature: 265.269958
   location_x: -6
   location_y: 4
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.298828
   location_x: -6
@@ -831,17 +831,17 @@ cells:
   temperature: 264.664917
   location_x: -7
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.383789
   location_x: -7
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.268555
   location_x: -7
   location_y: 4
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.239044
   location_x: -7
@@ -865,7 +865,7 @@ cells:
   temperature: 264.539063
   location_x: -8
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265
   diseaseName: FoodPoisoning
@@ -876,65 +876,65 @@ cells:
   mass: 182.611313
   temperature: 263.692963
   location_x: -9
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.998871
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -9
   location_y: 1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -9
   location_y: 2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.979187
   location_x: -9
   location_y: 3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 263.787231
   location_x: -10
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.969177
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -10
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.99939
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -10
   location_y: 1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 263.168304
   location_x: -9
   location_y: -1
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.200012
   diseaseName: FoodPoisoning
   location_x: -7
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.151947
   location_x: -6
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.874695
   location_x: -5
   location_y: -2
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.710266
   diseaseName: FoodPoisoning
@@ -1016,24 +1016,24 @@ cells:
   temperature: 263.025726
   location_x: 6
   location_y: -3
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.085907
   location_x: 7
   location_y: -3
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.117126
   location_x: 8
   location_y: -3
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 257.523468
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -7
   location_y: -4
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 257.636383
   diseaseName: FoodPoisoning
@@ -1101,31 +1101,31 @@ cells:
   temperature: 263.007813
   location_x: 5
   location_y: -4
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 265.081512
   location_x: 6
   location_y: -4
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.076233
   location_x: 7
   location_y: -4
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 257.339844
   diseaseName: FoodPoisoning
   diseaseCount: -34
   location_x: -6
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.105652
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: -5
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.147827
   diseaseName: FoodPoisoning
@@ -1161,149 +1161,149 @@ cells:
   temperature: 262.990631
   location_x: 2
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.17746
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: 3
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.186066
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: 4
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.193054
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: 5
   location_y: -5
-- element: Dirt
+- element: Fossil
   mass: 2202.9646
   temperature: 264.959198
   location_x: 6
   location_y: -5
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 255.000244
   location_x: -6
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 255.827606
   location_x: -5
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 256.662323
   location_x: -4
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.101624
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: -3
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.600006
   diseaseName: FoodPoisoning
   location_x: -2
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.171265
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: -1
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.171448
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.171356
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: 1
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.155853
   diseaseName: FoodPoisoning
   diseaseCount: -33
   location_x: 2
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 262.261749
   location_x: 3
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 263.223694
   location_x: 4
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 264.194611
   location_x: 5
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 265.009308
   location_x: 6
   location_y: -6
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 255.619354
   location_x: -4
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 255.754272
   location_x: -3
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.600006
   diseaseName: FoodPoisoning
   location_x: -2
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.369965
   diseaseName: FoodPoisoning
   diseaseCount: -5
   location_x: -1
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.429077
   diseaseName: FoodPoisoning
   diseaseCount: -5
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.440826
   diseaseName: FoodPoisoning
   diseaseCount: -5
   location_x: 1
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 260.44989
   location_x: 2
   location_y: -7
-- element: Granite
+- element: Katairite
   mass: 1000
   temperature: 261.363434
   location_x: 3
