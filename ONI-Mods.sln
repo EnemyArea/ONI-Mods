@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeyserFix", "GeyserFix\Geys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthanolGeyser", "EthanolGeyser\EthanolGeyser.csproj", "{025E7F68-E65D-4E4D-9E28-16263DD2E91A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfSealingAirlocks", "SelfSealingAirlocks\SelfSealingAirlocks.csproj", "{3219CD2E-5CEC-4891-8F9B-197A92C86B13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{025E7F68-E65D-4E4D-9E28-16263DD2E91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
