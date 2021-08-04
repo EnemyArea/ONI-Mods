@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthanolGeyser", "EthanolGey
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfSealingAirlocks", "SelfSealingAirlocks\SelfSealingAirlocks.csproj", "{3219CD2E-5CEC-4891-8F9B-197A92C86B13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedBridges", "ExtendedBridges\ExtendedBridges.csproj", "{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3219CD2E-5CEC-4891-8F9B-197A92C86B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
