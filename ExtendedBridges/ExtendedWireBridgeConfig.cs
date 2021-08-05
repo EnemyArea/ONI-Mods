@@ -11,18 +11,18 @@ public class ExtendedWireBridgeConfig : IBuildingConfig
 
     public override BuildingDef CreateBuildingDef()
     {
-        string id = this.GetID();
-        int width = 4;
-        int height = 1;
-        string anim = "utilityelectricbridge_kanim";
-        int hitpoints = 30;
-        float construction_time = 3f;
+        var id = this.GetID();
+        var width = 4;
+        var height = 1;
+        var anim = "utilityelectricbridge_kanim";
+        var hitpoints = 30;
+        var construction_time = 3f;
         float[] tier = { 35f };
-        string[] all_METALS = MATERIALS.ALL_METALS;
-        float melting_point = 1600f;
-        BuildLocationRule build_location_rule = BuildLocationRule.WireBridge;
-        EffectorValues none = NOISE_POLLUTION.NONE;
-        BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER0, none, 0.2f);
+        var all_METALS = MATERIALS.ALL_METALS;
+        var melting_point = 1600f;
+        var build_location_rule = BuildLocationRule.WireBridge;
+        var none = NOISE_POLLUTION.NONE;
+        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER0, none, 0.2f);
         buildingDef.Overheatable = false;
         buildingDef.Floodable = false;
         buildingDef.Entombable = false;
@@ -47,7 +47,7 @@ public class ExtendedWireBridgeConfig : IBuildingConfig
     public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
     {
         base.DoPostConfigurePreview(def, go);
-        WireUtilityNetworkLink wireUtilityNetworkLink = this.AddNetworkLink(go);
+        var wireUtilityNetworkLink = this.AddNetworkLink(go);
         wireUtilityNetworkLink.visualizeOnly = true;
         go.AddOrGet<BuildingCellVisualizer>();
     }
@@ -55,21 +55,21 @@ public class ExtendedWireBridgeConfig : IBuildingConfig
     public override void DoPostConfigureUnderConstruction(GameObject go)
     {
         base.DoPostConfigureUnderConstruction(go);
-        WireUtilityNetworkLink wireUtilityNetworkLink = this.AddNetworkLink(go);
+        var wireUtilityNetworkLink = this.AddNetworkLink(go);
         wireUtilityNetworkLink.visualizeOnly = true;
         go.AddOrGet<BuildingCellVisualizer>();
     }
 
     public override void DoPostConfigureComplete(GameObject go)
     {
-        WireUtilityNetworkLink wireUtilityNetworkLink = this.AddNetworkLink(go);
+        var wireUtilityNetworkLink = this.AddNetworkLink(go);
         wireUtilityNetworkLink.visualizeOnly = false;
         go.AddOrGet<BuildingCellVisualizer>();
     }
 
     protected virtual WireUtilityNetworkLink AddNetworkLink(GameObject go)
     {
-        WireUtilityNetworkLink wireUtilityNetworkLink = go.AddOrGet<WireUtilityNetworkLink>();
+        var wireUtilityNetworkLink = go.AddOrGet<WireUtilityNetworkLink>();
         wireUtilityNetworkLink.maxWattageRating = Wire.WattageRating.Max1000;
         wireUtilityNetworkLink.link1 = new CellOffset(-1, 0);
         wireUtilityNetworkLink.link2 = new CellOffset(2, 0);

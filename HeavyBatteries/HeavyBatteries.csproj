@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}</ProjectGuid>
+    <ProjectGuid>{6B41DC78-C315-4A3B-8CC2-220F03002D40}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtendedBridges</RootNamespace>
-    <AssemblyName>ExtendedBridges</AssemblyName>
+    <RootNamespace>HeavyBatteriesMod</RootNamespace>
+    <AssemblyName>HeavyBatteries</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,6 +24,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,48 +35,47 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtendedBridges.cs" />
-    <Compile Include="ExtendedSolidConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLogicWireBridgeConfig.cs" />
-    <Compile Include="ExtendedWireRefinedBridgeConfig.cs" />
-    <Compile Include="ExtendedWireBridgeConfig.cs" />
-    <Compile Include="ExtendedGasConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLiquidConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLogicRibbonBridgeConfig.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigFile.cs" />
+    <Compile Include="EmergencyBatteryConfig.cs" />
+    <Compile Include="HeavyBatteriesEmergencyBatteryEnergy.cs" />
+    <Compile Include="HeavyBatteriesMod.cs" />
+    <Compile Include="HeavyBatteriesMod_OnLoad.cs" />
+    <Compile Include="HeavyBatteriesOnSpawn.cs" />
+    <Compile Include="HeavyBatteriesTech.cs" />
+    <Compile Include="HeavyBatteryConfig.cs" />
+    <Compile Include="HeavySmartBatteryConfig.cs" />
+    <Compile Include="HeavyTransformerConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.yaml" />
     <None Include="mod_info.yaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="preview.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)bin\Release\ExtendedBridges.dll" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.ExtendedBridges\ExtendedBridges.dll"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(ProjectDir)bin\Release\HeavyBatteries.dll" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.HeavyBatteries\HeavyBatteries.dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>

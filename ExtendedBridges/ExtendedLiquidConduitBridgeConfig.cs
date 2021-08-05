@@ -5,18 +5,18 @@ public class ExtendedLiquidConduitBridgeConfig : LiquidConduitBridgeConfig
 {
     public override BuildingDef CreateBuildingDef()
     {
-        string id = "ExtendedLiquidConduitBridge";
-        int width = 4;
-        int height = 1;
-        string anim = "utilityliquidbridge_kanim";
-        int hitpoints = 10;
-        float construction_time = 3f;
+        var id = "ExtendedLiquidConduitBridge";
+        var width = 4;
+        var height = 1;
+        var anim = "utilityliquidbridge_kanim";
+        var hitpoints = 10;
+        var construction_time = 3f;
         float[] tier = { 125f };
-        string[] raw_MINERALS = MATERIALS.RAW_MINERALS;
-        float melting_point = 1600f;
-        BuildLocationRule build_location_rule = BuildLocationRule.Conduit;
-        EffectorValues none = NOISE_POLLUTION.NONE;
-        BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, raw_MINERALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none, 0.2f);
+        var raw_MINERALS = MATERIALS.RAW_MINERALS;
+        var melting_point = 1600f;
+        var build_location_rule = BuildLocationRule.Conduit;
+        var none = NOISE_POLLUTION.NONE;
+        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, raw_MINERALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none, 0.2f);
         buildingDef.ObjectLayer = ObjectLayer.LiquidConduitConnection;
         buildingDef.SceneLayer = Grid.SceneLayer.LiquidConduitBridges;
         buildingDef.InputConduitType = ConduitType.Liquid;

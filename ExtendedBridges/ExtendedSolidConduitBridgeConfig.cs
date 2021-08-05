@@ -5,18 +5,18 @@ public class ExtendedSolidConduitBridgeConfig : SolidConduitBridgeConfig
 {
     public override BuildingDef CreateBuildingDef()
     {
-        string id = "ExtendedSolidConduitBridge";
-        int width = 4;
-        int height = 1;
-        string anim = "utilities_conveyorbridge_kanim";
-        int hitpoints = 10;
-        float construction_time = 30f;
+        var id = "ExtendedSolidConduitBridge";
+        var width = 4;
+        var height = 1;
+        var anim = "utilities_conveyorbridge_kanim";
+        var hitpoints = 10;
+        var construction_time = 30f;
         float[] tier = { 600f };
-        string[] all_METALS = MATERIALS.ALL_METALS;
-        float melting_point = 1600f;
-        BuildLocationRule build_location_rule = BuildLocationRule.Conduit;
-        EffectorValues none = NOISE_POLLUTION.NONE;
-        BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none, 0.2f);
+        var all_METALS = MATERIALS.ALL_METALS;
+        var melting_point = 1600f;
+        var build_location_rule = BuildLocationRule.Conduit;
+        var none = NOISE_POLLUTION.NONE;
+        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none, 0.2f);
         buildingDef.ObjectLayer = ObjectLayer.SolidConduitConnection;
         buildingDef.SceneLayer = Grid.SceneLayer.SolidConduitBridges;
         buildingDef.InputConduitType = ConduitType.Solid;

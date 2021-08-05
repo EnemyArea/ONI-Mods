@@ -11,7 +11,7 @@ public class ExtendedWireRefinedBridgeConfig : ExtendedWireBridgeConfig
 
     public override BuildingDef CreateBuildingDef()
     {
-        BuildingDef buildingDef = base.CreateBuildingDef();
+        var buildingDef = base.CreateBuildingDef();
         buildingDef.AnimFiles = new KAnimFile[]
         {
             Assets.GetAnim("utilityelectricbridgeconductive_kanim")
@@ -24,7 +24,7 @@ public class ExtendedWireRefinedBridgeConfig : ExtendedWireBridgeConfig
 
     protected override WireUtilityNetworkLink AddNetworkLink(GameObject go)
     {
-        WireUtilityNetworkLink wireUtilityNetworkLink = base.AddNetworkLink(go);
+        var wireUtilityNetworkLink = base.AddNetworkLink(go);
         wireUtilityNetworkLink.maxWattageRating = Wire.WattageRating.Max2000;
         return wireUtilityNetworkLink;
     }

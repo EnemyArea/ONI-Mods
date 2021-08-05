@@ -11,7 +11,7 @@ namespace SelfSealingAirlocks
             // If the attached gameobject doesn't exist, exit here
             if (__instance.gameObject == null) return;
 
-            Door.DoorType doorType = __instance.doorType;
+            var doorType = __instance.doorType;
             if (doorType <= Door.DoorType.ManualPressure || doorType == Door.DoorType.Sealed)
             {
                 for (var i = 0; i < __instance.building.PlacementCells.Length; i++)
