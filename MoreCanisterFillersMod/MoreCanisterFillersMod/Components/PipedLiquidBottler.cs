@@ -32,12 +32,12 @@ public class PipedLiquidBottler : Workable
     // Token: 0x06002017 RID: 8215 RVA: 0x000A7E60 File Offset: 0x000A6060
     private void UpdateStoredItemState()
     {
-        this.Storage.allowItemRemoval = (this.smi != null && this.smi.GetCurrentState() == this.smi.sm.Ready);
-        foreach (GameObject gameObject in this.Storage.items)
+        this.Storage.allowItemRemoval = (this.smi != null && this.smi.GetCurrentState() == this.smi.sm.ready);
+        foreach (var gameObject in this.Storage.items)
         {
             if (gameObject != null)
             {
-                gameObject.Trigger(-778359855, this.Storage);
+                gameObject.Trigger((int)GameHashes.OnStorageInteracted, this.Storage);
             }
         }
     }
@@ -52,96 +52,48 @@ public class PipedLiquidBottler : Workable
     private class Controller : GameStateMachine<Controller, Controller.Instance, PipedLiquidBottler>
     {
         // Token: 0x060069D7 RID: 27095 RVA: 0x00264C48 File Offset: 0x00262E48
-        public override void InitializeStates(out BaseState defaultState)
+        public override void InitializeStates(out BaseState default_state)
         {
-            Debug.Log("InitializeStates");
-
-            defaultState = this.Empty;
-            
-            this.Empty.PlayAnim("off").EventTransition(GameHashes.OnStorageChange, this.Filling, smi => smi.master.Storage.IsFull());
-            this.Filling.PlayAnim("working").OnAnimQueueComplete(this.Ready);
-            this.Ready.EventTransition(GameHashes.OnStorageChange, this.Pickup, smi => !smi.master.Storage.IsFull()).Enter(delegate (Instance smi)
+            default_state = this.empty;
+            this.empty.PlayAnim("off").EventTransition(GameHashes.OnStorageChange, this.filling, smi => smi.master.Storage.IsFull());
+            this.filling.PlayAnim("working").OnAnimQueueComplete(this.ready);
+            this.ready.EventTransition(GameHashes.OnStorageChange, this.pickup, smi => !smi.master.Storage.IsFull()).Enter(delegate (Instance smi)
             {
+                Debug.Log("StorageChanged-State: is ready");
                 smi.master.Storage.allowItemRemoval = true;
-
-                var autoDrop = smi.gameObject.AddOrGet<AutoDropInv>();
-                if (autoDrop.AutoDrop)
+                foreach (GameObject go in smi.master.Storage.items)
                 {
-                    smi.Drop();
-                }
-                else
-                {
-                    foreach (GameObject go in smi.master.Storage.items)
-                    {
-                        go.Trigger(-778359855, smi.master.Storage);
-                    }
+                    go.Trigger(-778359855, smi.master.Storage);
                 }
             }).Exit(delegate (Instance smi)
             {
                 smi.master.Storage.allowItemRemoval = false;
-
-                var autoDrop = smi.gameObject.AddOrGet<AutoDropInv>();
-                if (!autoDrop.AutoDrop)
+                foreach (GameObject go in smi.master.Storage.items)
                 {
-                    foreach (GameObject go in smi.master.Storage.items)
-                    {
-                        go.Trigger(-778359855, smi.master.Storage);
-                    }
+                    go.Trigger(-778359855, smi.master.Storage);
                 }
             });
-            this.Pickup.PlayAnim("pick_up").OnAnimQueueComplete(this.Empty);
-
-
-            //this.empty.PlayAnim("off").EventTransition(GameHashes.OnStorageChange, this.filling, (GasBottler.Controller.Instance smi) => smi.master.storage.IsFull());
-            //this.filling.PlayAnim("working").OnAnimQueueComplete(this.ready);
-            //this.ready.EventTransition(GameHashes.OnStorageChange, this.pickup, (GasBottler.Controller.Instance smi) => !smi.master.storage.IsFull()).Enter(delegate (GasBottler.Controller.Instance smi)
-            //{
-            //    smi.master.storage.allowItemRemoval = true;
-            //    foreach (GameObject go in smi.master.storage.items)
-            //    {
-            //        go.Trigger(-778359855, smi.master.storage);
-            //    }
-            //}).Exit(delegate (GasBottler.Controller.Instance smi)
-            //{
-            //    smi.master.storage.allowItemRemoval = false;
-            //    foreach (GameObject go in smi.master.storage.items)
-            //    {
-            //        go.Trigger(-778359855, smi.master.storage);
-            //    }
-            //});
-            //this.pickup.PlayAnim("pick_up").OnAnimQueueComplete(this.empty);
+            this.pickup.PlayAnim("pick_up").OnAnimQueueComplete(this.empty);
         }
 
         // Token: 0x04005198 RID: 20888
-        public State Empty;
+        public State empty;
 
         // Token: 0x04005199 RID: 20889
-        public State Filling;
+        public State filling;
 
         // Token: 0x0400519A RID: 20890
-        public State Ready;
+        public State ready;
 
         // Token: 0x0400519B RID: 20891
-        public State Pickup;
-
-        // Token: 0x04000B5F RID: 2911
-        private State Pre_drop;
-
-        // Token: 0x04000B60 RID: 2912
-        private State Dropping;
+        public State pickup;
 
         // Token: 0x02001BE9 RID: 7145
         public new class Instance : GameInstance
         {
             // Token: 0x06008BEB RID: 35819 RVA: 0x002D3170 File Offset: 0x002D1370
-            public Instance(PipedLiquidBottler master)
-                : base(master)
+            public Instance(PipedLiquidBottler master) : base(master)
             {
-            }
-
-            public void Drop()
-            {
-                this.GetComponent<Storage>().DropAll();
             }
         }
     }

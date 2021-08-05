@@ -1,6 +1,7 @@
 ﻿#region
 
 using System.Linq;
+using System.Reflection;
 using CaiLib.Utils;
 using Database;
 using HarmonyLib;
@@ -54,7 +55,7 @@ namespace MoreCanisterFillersMod
                 go.AddOrGet<AutoDropInv>();
             }
         }
-
+        
         // Token: 0x02000019 RID: 25
         [HarmonyPatch(typeof(SolidConduitInboxConfig), "DoPostConfigureComplete")]
         public static class SolidConduitInboxConfig_DoPostConfigureComplete_Patches
