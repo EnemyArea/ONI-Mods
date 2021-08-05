@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TUNING;
 using UnityEngine;
 
@@ -23,6 +24,7 @@ namespace MoreCanisterFillersMod.Buildings
 			buildingDef.PowerInputOffset = new CellOffset(0, 1);
 			buildingDef.EnergyConsumptionWhenActive = 60f;
 			buildingDef.SelfHeatKilowattsWhenActive = 0.06f;
+            GeneratedBuildings.RegisterWithOverlay(OverlayScreen.SolidConveyorIDs, "SolidConduitInbox");
 			return buildingDef;
 		}
 
@@ -52,7 +54,23 @@ namespace MoreCanisterFillersMod.Buildings
 		public override void DoPostConfigureComplete(GameObject go)
 		{
 			Prioritizable.AddRef(go);
-		}
+
+            List<Tag> list = new List<Tag>();
+            list.AddRange(STORAGEFILTERS.LIQUIDS);
+            Storage storage = go.AddOrGet<Storage>();
+            storage.capacityKg = 1000f;
+            storage.showInUI = true;
+            storage.showDescriptor = true;
+            storage.storageFilters = list;
+            storage.allowItemRemoval = false;
+            storage.onlyTransferFromLowerPriority = true;
+            storage.showCapacityStatusItem = true;
+            storage.showCapacityAsMainStatus = true;
+            go.AddOrGet<TreeFilterable>();
+
+			go.AddOrGet<SolidConduitInbox>();
+            go.AddOrGet<SolidConduitDispenser>();
+        }
 
 		// Token: 0x04000009 RID: 9
 		public const string Id = "asquared31415.ConveyorLiquidLoaderConfig";

@@ -45,6 +45,7 @@ namespace MoreCanisterFillersMod.Buildings
 		public override void DoPostConfigureComplete(GameObject go)
 		{
 			Prioritizable.AddRef(go);
+            go.AddOrGet<SolidConduitOutbox>();
 		}
 
 		// Token: 0x0400000B RID: 11
