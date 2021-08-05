@@ -14,7 +14,7 @@ namespace MoreCanisterFillersMod.Buildings
 			var tier = BUILDINGS.CONSTRUCTION_MASS_KG.TIER4;
 			var raw_MINERALS = MATERIALS.RAW_MINERALS;
 			var none = NOISE_POLLUTION.NONE;
-			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorBottleEmptier", 1, 3, "gas_emptying_station_kanim", 30, 10f, tier, raw_MINERALS, 1600f, BuildLocationRule.OnFloor, BUILDINGS.DECOR.PENALTY.TIER1, none, 0.2f);
+			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorBottleEmptier", 1, 3, "gas_emptying_station_kanim", 30, 10f, tier, raw_MINERALS, 1600f, BuildLocationRule.OnFloor, BUILDINGS.DECOR.PENALTY.TIER1, none);
 			buildingDef.Floodable = false;
 			buildingDef.AudioCategory = "Metal";
 			buildingDef.Overheatable = true;

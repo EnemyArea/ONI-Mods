@@ -14,7 +14,7 @@ namespace MoreCanisterFillersMod.Buildings
 			var tier = BUILDINGS.CONSTRUCTION_MASS_KG.TIER3;
 			var refined_METALS = MATERIALS.REFINED_METALS;
 			var none = NOISE_POLLUTION.NONE;
-			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorBottleLoader", 1, 2, "conveyorin_kanim", 100, 60f, tier, refined_METALS, 1600f, BuildLocationRule.Anywhere, BUILDINGS.DECOR.PENALTY.TIER1, none, 0.2f);
+			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorBottleLoader", 1, 2, "conveyorin_kanim", 100, 60f, tier, refined_METALS, 1600f, BuildLocationRule.Anywhere, BUILDINGS.DECOR.PENALTY.TIER1, none);
 			buildingDef.Deprecated = true;
 			buildingDef.RequiresPowerInput = true;
 			buildingDef.EnergyConsumptionWhenActive = 120f;
@@ -42,7 +42,7 @@ namespace MoreCanisterFillersMod.Buildings
 		{
 			go.AddOrGet<LogicOperationalController>();
 			Prioritizable.AddRef(go);
-			go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.IndustrialMachinery, false);
+			go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.IndustrialMachinery);
 			go.AddOrGet<EnergyConsumer>();
 			go.AddOrGet<Automatable>();
 			var list = new List<Tag>();

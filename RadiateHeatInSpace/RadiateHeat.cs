@@ -21,25 +21,25 @@ namespace RadiateHeatInSpace
 
         public void Sim1000ms(float dt)
         {
-            var temp = gameObject.GetComponent<PrimaryElement>().Temperature;
+            var temp = this.gameObject.GetComponent<PrimaryElement>().Temperature;
             if (temp > 5f)
             {
-                var cooling = radiative_heat(temp);
-                if (CheckInSpace())
+                var cooling = this.radiative_heat(temp);
+                if (this.CheckInSpace())
                 {
                     if (cooling > 1f)
                     {
-                        CurrentCooling = (float) cooling;
-                        GameComps.StructureTemperatures.ProduceEnergy(structureTemperature, (float) -cooling / 1000,
+                        this.CurrentCooling = (float) cooling;
+                        GameComps.StructureTemperatures.ProduceEnergy(this.structureTemperature, (float) -cooling / 1000,
                             "Radiated", 1f);
                     }
 
-                    UpdateStatusItem(true);
+                    this.UpdateStatusItem(true);
                 }
                 else
                 {
-                    GameComps.StructureTemperatures.ProduceEnergy(structureTemperature, 0, "Radiated", 1f);
-                    UpdateStatusItem();
+                    GameComps.StructureTemperatures.ProduceEnergy(this.structureTemperature, 0, "Radiated", 1f);
+                    this.UpdateStatusItem();
                 }
             }
         }
@@ -48,23 +48,23 @@ namespace RadiateHeatInSpace
         {
             base.OnSpawn();
 
-            OccupyOffsets = new[]
+            this.OccupyOffsets = new[]
             {
                 new CellOffset(0, 0)
             }; // i am lazy and will only check building root bc it's annoying to account for rotation
-            structureTemperature = GameComps.StructureTemperatures.GetHandle(gameObject);
+            this.structureTemperature = GameComps.StructureTemperatures.GetHandle(this.gameObject);
         }
 
         private double radiative_heat(float temp)
         {
-            return Math.Pow(temp, 4) * stefanBoltzmanConstant * emissivity * surface_area;
+            return Math.Pow(temp, 4) * stefanBoltzmanConstant * this.emissivity * this.surface_area;
         }
 
         private bool CheckInSpace()
         {
             // Check whether in spaaace
             var root_cell = Grid.PosToCell(this);
-            foreach (var offset in OccupyOffsets)
+            foreach (var offset in this.OccupyOffsets)
                 if (!OniUtils.IsCellExposedToSpace(Grid.OffsetCell(root_cell, offset)))
                     return false;
 
@@ -84,25 +84,25 @@ namespace RadiateHeatInSpace
             if (in_space)
             {
                 // Remove outdated status, if it exists
-                handle_notinspace = selectable.RemoveStatusItem(handle_notinspace);
+                this.handle_notinspace = this.selectable.RemoveStatusItem(this.handle_notinspace);
                 // Update the existing callback
-                _radiating_status = new StatusItem("RADIATESHEAT_RADIATING", "MISC", "", StatusItem.IconType.Info,
+                this._radiating_status = new StatusItem("RADIATESHEAT_RADIATING", "MISC", "", StatusItem.IconType.Info,
                     NotificationType.Neutral, false, OverlayModes.HeatFlow.ID);
-                _radiating_status.resolveTooltipCallback = _FormatStatusCallback;
-                _radiating_status.resolveStringCallback = _FormatStatusCallback;
-                if (handle_radiating == Guid.Empty)
-                    handle_radiating = selectable.AddStatusItem(_radiating_status, this);
+                this._radiating_status.resolveTooltipCallback = _FormatStatusCallback;
+                this._radiating_status.resolveStringCallback = _FormatStatusCallback;
+                if (this.handle_radiating == Guid.Empty)
+                    this.handle_radiating = this.selectable.AddStatusItem(this._radiating_status, this);
             }
             else
             {
                 // Remove outdated status-
-                handle_radiating = selectable.RemoveStatusItem(handle_radiating);
+                this.handle_radiating = this.selectable.RemoveStatusItem(this.handle_radiating);
 
-                _no_space_status = new StatusItem("RADIATESHEAT_NOTINSPACE", "MISC", "", StatusItem.IconType.Info,
+                this._no_space_status = new StatusItem("RADIATESHEAT_NOTINSPACE", "MISC", "", StatusItem.IconType.Info,
                     NotificationType.Neutral, false, OverlayModes.HeatFlow.ID);
                 // add the status item!
-                if (handle_notinspace == Guid.Empty)
-                    handle_notinspace = selectable.AddStatusItem(_no_space_status, this);
+                if (this.handle_notinspace == Guid.Empty)
+                    this.handle_notinspace = this.selectable.AddStatusItem(this._no_space_status, this);
             }
         }
     }

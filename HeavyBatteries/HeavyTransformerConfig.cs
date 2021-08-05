@@ -10,7 +10,7 @@ namespace HeavyBatteriesMod
 		public override BuildingDef CreateBuildingDef()
 		{
 			string id = "HeavyTransformer";
-			int width = 5;
+			int width = 6;
 			int height = 4;
 			string anim = "transformer_kanim";
 			int hitpoints = 45;
@@ -30,12 +30,12 @@ namespace HeavyBatteriesMod
 			float melting_point = 800f;
 			BuildLocationRule build_location_rule = BuildLocationRule.OnFloor;
 			EffectorValues tier = NOISE_POLLUTION.NOISY.TIER6;
-			BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, construction_mass, construction_materials, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER1, tier, 0.2f);
+			BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, construction_mass, construction_materials, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER1, tier);
 			buildingDef.RequiresPowerInput = true;
             buildingDef.RequiresPowerOutput = true;
 			buildingDef.UseWhitePowerOutputConnectorColour = true;
 			buildingDef.PowerInputOffset = new CellOffset(-2, 2);
-			buildingDef.PowerOutputOffset = new CellOffset(2, 0);
+			buildingDef.PowerOutputOffset = new CellOffset(3, 0);
 			buildingDef.ElectricalArrowOffset = new CellOffset(1, 0);
 			buildingDef.ExhaustKilowattsWhenActive = 2f;
 			buildingDef.SelfHeatKilowattsWhenActive = 3f;
@@ -51,7 +51,7 @@ namespace HeavyBatteriesMod
 		// Token: 0x0600003E RID: 62 RVA: 0x00002D20 File Offset: 0x00000F20
 		public override void ConfigureBuildingTemplate(GameObject go, Tag prefab_tag)
 		{
-			go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.IndustrialMachinery, false);
+			go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.IndustrialMachinery);
 			go.AddComponent<RequireInputs>();
 			BuildingDef def = go.GetComponent<Building>().Def;
 			Battery battery = go.AddOrGet<Battery>();
@@ -65,7 +65,7 @@ namespace HeavyBatteriesMod
 		// Token: 0x0600003F RID: 63 RVA: 0x00002D8C File Offset: 0x00000F8C
 		public override void DoPostConfigureComplete(GameObject go)
 		{
-			UnityEngine.Object.DestroyImmediate(go.GetComponent<EnergyConsumer>());
+			Object.DestroyImmediate(go.GetComponent<EnergyConsumer>());
 			go.AddOrGetDef<PoweredActiveController.Def>();
 		}
 

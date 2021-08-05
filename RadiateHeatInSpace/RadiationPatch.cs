@@ -21,8 +21,8 @@ namespace RadiateHeatInSpace
             public bool do_func(GameObject go)
             {
                 var heat = go.AddOrGet<RadiatesHeat>();
-                heat.emissivity = emissivity;
-                heat.surface_area = surface_area;
+                heat.emissivity = this.emissivity;
+                heat.surface_area = this.surface_area;
                 return true;
             }
         }

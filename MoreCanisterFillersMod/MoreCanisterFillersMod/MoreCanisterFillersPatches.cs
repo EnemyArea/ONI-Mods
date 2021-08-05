@@ -40,7 +40,7 @@ namespace MoreCanisterFillersMod
                 BuildingUtils.AddBuildingToTechnology("SolidTransport", "asquared31415.ConveyorLiquidPipeFillerConfig");
                 BuildingUtils.AddBuildingToTechnology("SolidTransport", "asquared31415.ConveyorGasLoaderConfig");
                 BuildingUtils.AddBuildingToTechnology("SolidTransport", "asquared31415.ConveyorLiquidLoaderConfig");
-                LocString.CreateLocStringKeys(typeof(STRINGS.BUILDINGS), "STRINGS.");
+                LocString.CreateLocStringKeys(typeof(STRINGS.BUILDINGS));
             }
         }
 

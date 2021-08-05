@@ -12,7 +12,7 @@ namespace CaiLib.Logger
 		// Token: 0x0600003C RID: 60 RVA: 0x00002F88 File Offset: 0x00001188
 		public static void LogInit()
 		{
-			Console.WriteLine(string.Format("{0} <<-- CaiLib -->> Loaded [ {1} ] with version {2}", Logger.Timestamp(), Logger.GetModName(), Assembly.GetExecutingAssembly().GetName().Version));
+			Console.WriteLine(string.Format("{0} <<-- CaiLib -->> Loaded [ {1} ] with version {2}", Timestamp(), GetModName(), Assembly.GetExecutingAssembly().GetName().Version));
 		}
 
 		// Token: 0x0600003D RID: 61 RVA: 0x00002FB4 File Offset: 0x000011B4
@@ -20,9 +20,9 @@ namespace CaiLib.Logger
 		{
 			Console.WriteLine(string.Concat(new string[]
 			{
-				Logger.Timestamp(),
+				Timestamp(),
 				" <<-- ",
-				Logger.GetModName(),
+				GetModName(),
 				" -->> ",
 				message
 			}));
@@ -37,9 +37,9 @@ namespace CaiLib.Logger
 		// Token: 0x0600003F RID: 63 RVA: 0x00003010 File Offset: 0x00001210
 		private static string GetModName()
 		{
-			if (Logger._modName != string.Empty)
+			if (_modName != string.Empty)
 			{
-				return Logger._modName;
+				return _modName;
 			}
 			var executingAssembly = Assembly.GetExecutingAssembly();
 			var name = executingAssembly.GetName().Name;
@@ -51,8 +51,8 @@ namespace CaiLib.Logger
 			var obj = Activator.CreateInstance(type);
 			var property = type.GetProperty("Name");
 			var obj2 = (property != null) ? property.GetValue(obj, null) : null;
-			Logger._modName = ((obj2 == null) ? name : obj2.ToString());
-			return Logger._modName;
+			_modName = ((obj2 == null) ? name : obj2.ToString());
+			return _modName;
 		}
 
 		// Token: 0x04000010 RID: 16

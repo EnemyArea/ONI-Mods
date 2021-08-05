@@ -11,7 +11,7 @@ namespace MoreCanisterFillersMod.Buildings
 		// Token: 0x0600000D RID: 13 RVA: 0x00002320 File Offset: 0x00000520
 		public override BuildingDef CreateBuildingDef()
 		{
-			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorGasLoaderConfig", 1, 2, "conveyorin_kanim", 30, 30f, BUILDINGS.CONSTRUCTION_MASS_KG.TIER3, MATERIALS.ALL_METALS, 1600f, BuildLocationRule.Anywhere, BUILDINGS.DECOR.PENALTY.TIER1, NOISE_POLLUTION.NONE, 0.2f);
+			var buildingDef = BuildingTemplates.CreateBuildingDef("asquared31415.ConveyorGasLoaderConfig", 1, 2, "conveyorin_kanim", 30, 30f, BUILDINGS.CONSTRUCTION_MASS_KG.TIER3, MATERIALS.ALL_METALS, 1600f, BuildLocationRule.Anywhere, BUILDINGS.DECOR.PENALTY.TIER1, NOISE_POLLUTION.NONE);
 			buildingDef.Floodable = false;
 			buildingDef.Overheatable = false;
 			buildingDef.ViewMode = OverlayModes.SolidConveyor.ID;
@@ -40,7 +40,7 @@ namespace MoreCanisterFillersMod.Buildings
 			var solidConduitDispenser = go.AddOrGet<SolidConduitDispenser>();
 			solidConduitDispenser.alwaysDispense = true;
 			solidConduitDispenser.elementFilter = null;
-			BuildingTemplates.CreateDefaultStorage(go, false);
+			BuildingTemplates.CreateDefaultStorage(go);
 		}
 
 		// Token: 0x0600000F RID: 15 RVA: 0x00002434 File Offset: 0x00000634

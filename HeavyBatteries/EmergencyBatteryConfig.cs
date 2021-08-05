@@ -32,12 +32,12 @@ namespace HeavyBatteriesMod
 			float exhaust_temperature_active = 0f;
 			float self_heat_kilowatts_active = 0f;
 			EffectorValues tier = NOISE_POLLUTION.NOISY.TIER2;
-			BuildingDef buildingDef = base.CreateBuildingDef(id, width, height, hitpoints, anim, construction_time, construction_mass, construction_materials, melting_point, exhaust_temperature_active, self_heat_kilowatts_active, TUNING.BUILDINGS.DECOR.PENALTY.TIER2, tier);
+			BuildingDef buildingDef = base.CreateBuildingDef(id, width, height, hitpoints, anim, construction_time, construction_mass, construction_materials, melting_point, exhaust_temperature_active, self_heat_kilowatts_active, BUILDINGS.DECOR.PENALTY.TIER2, tier);
 			buildingDef.PermittedRotations = PermittedRotations.Unrotatable;
 			SoundEventVolumeCache.instance.AddVolume("batterymed_kanim", "Battery_med_rattle", NOISE_POLLUTION.NOISY.TIER2);
             buildingDef.LogicOutputPorts = new List<LogicPorts.Port>
             {
-                LogicPorts.Port.OutputPort(BatterySmart.PORT_ID, new CellOffset(0, 0), STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_ACTIVE, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_INACTIVE, true, false)
+                LogicPorts.Port.OutputPort(BatterySmart.PORT_ID, new CellOffset(0, 0), STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_ACTIVE, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_INACTIVE, true)
             };
 			return buildingDef;
 		}

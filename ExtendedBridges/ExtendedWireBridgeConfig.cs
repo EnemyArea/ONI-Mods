@@ -22,7 +22,7 @@ public class ExtendedWireBridgeConfig : IBuildingConfig
         var melting_point = 1600f;
         var build_location_rule = BuildLocationRule.WireBridge;
         var none = NOISE_POLLUTION.NONE;
-        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER0, none, 0.2f);
+        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, all_METALS, melting_point, build_location_rule, BUILDINGS.DECOR.PENALTY.TIER0, none);
         buildingDef.Overheatable = false;
         buildingDef.Floodable = false;
         buildingDef.Entombable = false;

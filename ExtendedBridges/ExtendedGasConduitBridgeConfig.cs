@@ -16,7 +16,7 @@ public class ExtendedGasConduitBridgeConfig : GasConduitBridgeConfig
         var melting_point = 1600f;
         var build_location_rule = BuildLocationRule.Conduit;
         var none = NOISE_POLLUTION.NONE;
-        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, raw_MINERALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none, 0.2f);
+        var buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time, tier, raw_MINERALS, melting_point, build_location_rule, BUILDINGS.DECOR.NONE, none);
         buildingDef.ObjectLayer = ObjectLayer.GasConduitConnection;
         buildingDef.SceneLayer = Grid.SceneLayer.GasConduitBridges;
         buildingDef.InputConduitType = ConduitType.Gas;

@@ -11,7 +11,7 @@ namespace CaiLib.Utils
 		// Token: 0x06000034 RID: 52 RVA: 0x00002CE8 File Offset: 0x00000EE8
 		public static void AddCropType(string cropId, float domesticatedGrowthTimeInCycles, int producedPerHarvest)
 		{
-			CROPS.CROP_TYPES.Add(new Crop.CropVal(cropId, domesticatedGrowthTimeInCycles * 600f, producedPerHarvest, true));
+			CROPS.CROP_TYPES.Add(new Crop.CropVal(cropId, domesticatedGrowthTimeInCycles * 600f, producedPerHarvest));
 		}
 	}
 }
