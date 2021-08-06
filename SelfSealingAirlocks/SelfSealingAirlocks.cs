@@ -25,22 +25,22 @@ namespace SelfSealingAirlocks
     [HarmonyPatch(typeof(Door), "SetSimState")]
     internal class SelfSealingAirlocks_Door_SetSimState
     {
-        private static bool Prefix(Door __instance, bool isDoorOpen, IList<int> cells)
+        private static bool Prefix(Door __instance, bool is_door_open, IList<int> cells)
         {
-            var component = __instance.GetComponent<PrimaryElement>();
-            var mass = component.Mass / (float)cells.Count;
-            for (var i = 0; i < cells.Count; i++)
+            PrimaryElement component = __instance.GetComponent<PrimaryElement>();
+            float mass = component.Mass / (float)cells.Count;
+            for (int i = 0; i < cells.Count; i++)
             {
-                var offsetCell = cells[i];
-                var doorType = __instance.doorType;
+                int offsetCell = cells[i];
+                Door.DoorType doorType = __instance.doorType;
                 if (doorType <= Door.DoorType.ManualPressure || doorType == Door.DoorType.Sealed)
                 {
                     World.Instance.groundRenderer.MarkDirty(offsetCell);
-                    if (isDoorOpen)
+                    if (is_door_open)
                     {
-                        var methodOpened = AccessTools.Method(typeof(Door), "OnSimDoorOpened");
-                        var cbOpened = (System.Action)Delegate.CreateDelegate(typeof(System.Action), __instance, methodOpened);
-                        var handle = Game.Instance.callbackManager.Add(new Game.CallbackInfo(cbOpened));
+                        MethodInfo method_opened = AccessTools.Method(typeof(Door), "OnSimDoorOpened");
+                        System.Action cb_opened = (System.Action)Delegate.CreateDelegate(typeof(System.Action), __instance, method_opened);
+                        HandleVector<Game.CallbackInfo>.Handle handle = Game.Instance.callbackManager.Add(new Game.CallbackInfo(cb_opened));
 
                         SimMessages.Dig(offsetCell, handle.index, true);
 
@@ -52,11 +52,11 @@ namespace SelfSealingAirlocks
                     }
                     else
                     {
-                        var methodClosed = AccessTools.Method(typeof(Door), "OnSimDoorClosed");
-                        var cbClosed = (System.Action)Delegate.CreateDelegate(typeof(System.Action), __instance, methodClosed);
-                        var handle = Game.Instance.callbackManager.Add(new Game.CallbackInfo(cbClosed));
+                        MethodInfo method_closed = AccessTools.Method(typeof(Door), "OnSimDoorClosed");
+                        System.Action cb_closed = (System.Action)Delegate.CreateDelegate(typeof(System.Action), __instance, method_closed);
+                        HandleVector<Game.CallbackInfo>.Handle handle = Game.Instance.callbackManager.Add(new Game.CallbackInfo(cb_closed));
 
-                        var temperature = component.Temperature;
+                        float temperature = component.Temperature;
                         if (temperature <= 0f)
                         {
                             temperature = component.Temperature;
