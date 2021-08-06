@@ -21,6 +21,7 @@ namespace SelfSealingAirlocks
             };
         }
     }
+
     // Update sim state setter to make airlock doors gas impermable
     [HarmonyPatch(typeof(Door), "SetSimState")]
     internal class SelfSealingAirlocks_Door_SetSimState
@@ -47,8 +48,13 @@ namespace SelfSealingAirlocks
                         SimMessages.ClearCellProperties(offsetCell, 1);
                         SimMessages.ClearCellProperties(offsetCell, 2);
                         SimMessages.ClearCellProperties(offsetCell, 4);
-                        
+
                         SimMessages.SetCellProperties(offsetCell, (byte)(__instance.CurrentState == Door.ControlState.Auto ? 7 : 4));
+
+                        if (__instance.ShouldBlockFallingSand)
+                        {
+                            SimMessages.ClearCellProperties(offsetCell, 4);
+                        }
                     }
                     else
                     {
