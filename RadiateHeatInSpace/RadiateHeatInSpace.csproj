@@ -7,7 +7,7 @@
     <UsesPLib>true</UsesPLib>
   </PropertyGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /Y &quot;$(ProjectDir)bin\Release\net471\RadiateHeatInSpace.dll&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.RadiateHeatInSpace\RadiateHeatInSpace.dll&quot;" />
+    <Exec Command="if not exist &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)&quot; mkdir &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)&quot;&#xD;&#xA;copy /Y &quot;$(TargetPath)&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\$(TargetFileName).dll&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)mod.yaml&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod.yaml&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)mod_info.yaml&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod_info.yaml&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)preview.png&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\preview.png&quot;" />
   </Target>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -22,5 +22,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="preview.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

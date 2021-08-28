@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{26766715-4733-45CB-BDFE-4A544091AEBC}</ProjectGuid>
+    <Configurations>Debug;Release</Configurations>
+    <TargetFramework>net471</TargetFramework>
+    <RootNamespace>FlowSplitters</RootNamespace>
+    <AssemblyName>FlowSplitters</AssemblyName>
+    <AssemblyVersion>2021.6.26.0</AssemblyVersion>
+    <FileVersion>2021.6.26.2</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ModName>Flow Splitters</ModName>
+    <ModDescription></ModDescription>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" />
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)&quot; mkdir &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)&quot;&#xD;&#xA;copy /Y &quot;$(TargetPath)&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\$(TargetFileName).dll&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)mod.yaml&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod.yaml&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)mod_info.yaml&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod_info.yaml&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)preview.png&quot; &quot;D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\preview.png&quot;" />
+  </Target>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="mod.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="mod_info.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

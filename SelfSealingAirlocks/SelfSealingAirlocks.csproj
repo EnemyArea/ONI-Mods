@@ -79,6 +79,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)bin\Release\SelfSealingAirlocks.dll" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.Airlock\SelfSealingAirlocks.dll"</PostBuildEvent>
+    <PostBuildEvent>if not exist "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)" mkdir "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)"
+copy /Y "$(TargetPath)" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\$(TargetFileName).dll"
+copy /Y "$(TargetDir)mod.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod.yaml"
+copy /Y "$(TargetDir)mod_info.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod_info.yaml"
+copy /Y "$(TargetDir)preview.jpg" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\preview.jpg"</PostBuildEvent>
   </PropertyGroup>
 </Project>

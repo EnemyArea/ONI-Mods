@@ -62,9 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="anim\assets\geyserliquidethanolchilled\geyser_liquid_ethanol_chilled_0.png">
+    <None Include="anim\assets\geyserliquidethanolchilled\geyser_liquid_ethanol_chilled_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Content Include="preview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -88,6 +88,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)bin\Release\EthanolGeyser.dll" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.EthanolGeyser\EthanolGeyser.dll"</PostBuildEvent>
+    <PostBuildEvent>if not exist "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)" mkdir "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)"
+
+copy /Y "$(TargetPath)" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\$(TargetFileName).dll"
+copy /Y "$(TargetDir)mod.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod.yaml"
+copy /Y "$(TargetDir)mod_info.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod_info.yaml"
+copy /Y "$(TargetDir)preview.png" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\preview.png"
+
+xcopy "$(TargetDir)\anim" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I
+xcopy "$(TargetDir)\templates" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\templates" /E /I</PostBuildEvent>
   </PropertyGroup>
 </Project>

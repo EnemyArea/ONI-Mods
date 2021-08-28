@@ -68,14 +68,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="preview.png" />
+    <Content Include="preview.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="mod.yaml" />
-    <None Include="mod_info.yaml" />
+    <None Include="mod.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mod_info.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)bin\Release\HeavyBatteries.dll" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.HeavyBatteries\HeavyBatteries.dll"</PostBuildEvent>
+    <PostBuildEvent>if not exist "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)" mkdir "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)"
+copy /Y "$(TargetPath)" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\$(TargetFileName).dll"
+copy /Y "$(TargetDir)mod.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod.yaml"
+copy /Y "$(TargetDir)mod_info.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\mod_info.yaml"
+copy /Y "$(TargetDir)preview.png" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\preview.png"</PostBuildEvent>
   </PropertyGroup>
 </Project>
