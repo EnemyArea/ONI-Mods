@@ -1,13 +1,14 @@
 ﻿using System;
 using Database;
 using HarmonyLib;
+using KMod;
 using UnityEngine;
 using static RadiateHeatInSpace.SkyLib.Logger;
 using static RadiateHeatInSpace.SkyLib.OniUtils;
 
 namespace RadiateHeatInSpace
 {
-    public class RadiatePatch
+    public class RadiatePatch : UserMod2
     {
         public static bool didStartUp_Building;
         public static bool didStartUp_Db;

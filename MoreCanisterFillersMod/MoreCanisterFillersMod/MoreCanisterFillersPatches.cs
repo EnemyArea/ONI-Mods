@@ -5,6 +5,7 @@ using System.Reflection;
 using CaiLib.Utils;
 using Database;
 using HarmonyLib;
+using KMod;
 using MoreCanisterFillersMod.Components;
 using TUNING;
 using UnityEngine;
@@ -14,7 +15,7 @@ using UnityEngine;
 namespace MoreCanisterFillersMod
 {
     // Token: 0x02000003 RID: 3
-    public static class MoreCanisterFillersPatches
+    public class MoreCanisterFillersPatches : UserMod2
     {
         [HarmonyPatch(typeof(Techs), "Init")]
         public static class Techs_Init_Path

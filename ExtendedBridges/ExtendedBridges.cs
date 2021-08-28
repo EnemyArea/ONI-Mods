@@ -3,6 +3,7 @@ using System.Linq;
 using Database;
 using STRINGS;
 using HarmonyLib;
+using KMod;
 
 namespace ExtendedBridges
 {
@@ -41,7 +42,7 @@ namespace ExtendedBridges
 
     // Add strings for the bridges and add them to the build menu
     [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
-    internal class ExtendedBridges_GeneratedBuildings_LoadGeneratedBuildings
+    internal class ExtendedBridges_GeneratedBuildings_LoadGeneratedBuildings : UserMod2
     {
         private static void Prefix()
         {

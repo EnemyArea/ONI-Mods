@@ -34,19 +34,19 @@ namespace HeavyBatteriesMod
 			return buildingDef;
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x00002AE5 File Offset: 0x00000CE5
-		public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-		{
-			//GeneratedBuildings.RegisterLogicPorts(go, null, HeavySmartBatteryConfig.OUTPUT_PORTS);
-            GeneratedBuildings.RegisterSingleLogicInputPort(go);
-		}
+		//// Token: 0x06000038 RID: 56 RVA: 0x00002AE5 File Offset: 0x00000CE5
+		//public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
+		//{
+		//	//GeneratedBuildings.RegisterLogicPorts(go, null, HeavySmartBatteryConfig.OUTPUT_PORTS);
+  //          GeneratedBuildings.RegisterSingleLogicInputPort(go);
+		//}
 
-		// Token: 0x06000039 RID: 57 RVA: 0x00002AF5 File Offset: 0x00000CF5
-		public override void DoPostConfigureUnderConstruction(GameObject go)
-		{
-			//GeneratedBuildings.RegisterLogicPorts(go, null, HeavySmartBatteryConfig.OUTPUT_PORTS);
-            GeneratedBuildings.RegisterSingleLogicInputPort(go);
-		}
+		//// Token: 0x06000039 RID: 57 RVA: 0x00002AF5 File Offset: 0x00000CF5
+		//public override void DoPostConfigureUnderConstruction(GameObject go)
+		//{
+		//	//GeneratedBuildings.RegisterLogicPorts(go, null, HeavySmartBatteryConfig.OUTPUT_PORTS);
+  //          GeneratedBuildings.RegisterSingleLogicInputPort(go);
+		//}
 
 		// Token: 0x0600003A RID: 58 RVA: 0x00002B08 File Offset: 0x00000D08
 		public override void DoPostConfigureComplete(GameObject go)
@@ -55,8 +55,7 @@ namespace HeavyBatteriesMod
 			batterySmart.capacity = (float)ConfigFile.config.heavySmartBatteryCapacity;
 			batterySmart.joulesLostPerSecond = batterySmart.capacity * 0.005f / 600f;
 			batterySmart.powerSortOrder = 1000;
-            //GeneratedBuildings.RegisterLogicPorts(go, null, HeavySmartBatteryConfig.OUTPUT_PORTS);
-			GeneratedBuildings.RegisterSingleLogicInputPort(go);
+			//GeneratedBuildings.RegisterSingleLogicInputPort(go);
 			base.DoPostConfigureComplete(go);
 		}
 
