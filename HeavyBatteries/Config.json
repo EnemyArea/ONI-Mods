@@ -1,0 +1,22 @@
+{
+  "heavyBatteryCost": 800,
+  "heavyBatterySelfHeat": 0.5,
+  "heavyBatteryHeatExhaust": 2.0,
+  "heavyBatteryCapacity": 320000,
+  
+  "heavySmartBatteryCost": 650,
+  "heavySmartBatterySelfHeat": 0.0,
+  "heavySmartBatteryHeatExhaust": 0.8,
+  "heavySmartBatteryCapacity": 160000,
+  
+  "emergencyBatteryEnabled": true,
+
+  "emergencyBatteryCostM": 700,
+  "emergencyBatteryCostI": 200,
+  "emergencyBatteryCostC": 150,
+  "emergencyBatteryCapacity": 25000,
+
+  "heavyTransformerCostM": 600,
+  "heavyTransformerCostC": 100,
+  "heavyTransformerCostI": 100
+}
