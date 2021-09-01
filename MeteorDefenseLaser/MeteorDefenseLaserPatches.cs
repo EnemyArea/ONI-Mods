@@ -68,7 +68,7 @@ namespace MeteorDefenseLaser
             Strings.Add("STRINGS.BUILDING.STATUSITEMS.LASERSTOREDCHARGE.TOOLTIP", "This building can store enough power to fire the laser for 3 seconds.");
             Strings.Add("STRINGS.BUILDING.STATUSITEMS.LASERKILLS.NAME", "Kill count: {0}");
             Strings.Add("STRINGS.BUILDING.STATUSITEMS.LASERKILLS.TOOLTIP", "Number of meteors destroyed.");
-            BuildingUtils.AddBuildingToTechnology("SkyDetectors", MeteorDefenseLaserConfig.ID);
+            BuildingUtils.AddBuildingToTechnology("RoboticTools", MeteorDefenseLaserConfig.ID);
         }
     }
 
