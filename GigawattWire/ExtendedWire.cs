@@ -440,6 +440,7 @@ namespace GigawattWire
                 Strings.Add("STRINGS.UI.UNITSUFFIXES.ELECTRICAL.MEGAWATT", "MW");
                 Strings.Add("STRINGS.UI.UNITSUFFIXES.ELECTRICAL.GIGAWATT", "GW");
                 Strings.Add("STRINGS.UI.UNITSUFFIXES.ELECTRICAL.TERAWATT", "TW");
+                Strings.Add("STRINGS.MISC.TAGS.CONDUCTOR", "Conductor");
 
                 BuildingUtils.AddBuildingToTechnology("PowerRegulation", JacketedWireConfig.ID);
                 BuildingUtils.AddBuildingToTechnology("PowerRegulation", JacketedWireBridgeConfig.ID);
