@@ -1,0 +1,114 @@
+name: STRINGS.WORLDS.NEON_EDEN_LITE.NAME
+description: STRINGS.WORLDS.NEON_EDEN_LITE.DESCRIPTION
+spriteName: Asteroid_NeonEdenLite
+coordinatePrefix: EDEN-B
+difficulty: 0
+tier: 0
+
+worldsize:
+  X: 256
+  Y: 384
+layoutMethod: PowerTree # Note: We need to add weights to the items in the layer
+#                                in order to use this.
+
+# List all the zone files to load
+subworldFiles:
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteMeadowStart
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniMetal
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniWater
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniAlgae
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteMeadow
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteForest
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteForestMini
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteForestHot
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteRust
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteHotMarsh
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteJungle
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteFrozen
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteOcean
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteOceanDeep
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteBadlands
+  - name: subworlds/Impenetrable
+  - name: subworlds/magma/Bottom
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteOilPockets
+  - name: subworlds/space/Space
+  - name: wafflysworld/subworlds/neonedenlite/EdenLiteSurface
+
+startSubworldName: wafflysworld/subworlds/neonedenlite/EdenLiteMeadowStart
+startingBaseTemplate: sandstoneBase
+
+globalFeatureTemplates:
+  feature_geyser_generic: 18
+
+# Rivers:
+#   - River
+
+# When we are converting unknown cells, this will give us the options, processed in this order, the effects are cumlative
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadowStart
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniMetal
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniWater
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadowMiniAlgae
+      - wafflysworld/subworlds/neonedenlite/EdenLiteForestMini
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadow
+      - wafflysworld/subworlds/neonedenlite/EdenLiteForest
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 3
+    maxDistance: 999
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteForestHot
+      - wafflysworld/subworlds/neonedenlite/EdenLiteRust
+      - wafflysworld/subworlds/neonedenlite/EdenLiteHotMarsh
+      - wafflysworld/subworlds/neonedenlite/EdenLiteJungle
+      - wafflysworld/subworlds/neonedenlite/EdenLiteOcean
+      - wafflysworld/subworlds/neonedenlite/EdenLiteOceanDeep
+      - wafflysworld/subworlds/neonedenlite/EdenLiteFrozen
+      - wafflysworld/subworlds/neonedenlite/EdenLiteMeadowStart
+  - tagcommand: AtTag
+    tag: AtDepths
+    command: Replace
+    subworldNames:
+      - subworlds/magma/Bottom
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteOilPockets
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteBadlands
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - wafflysworld/subworlds/neonedenlite/EdenLiteSurface

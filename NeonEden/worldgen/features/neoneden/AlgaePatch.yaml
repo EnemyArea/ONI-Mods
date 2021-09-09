@@ -1,0 +1,17 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+borders:
+blobSize:
+  min: 1.5
+  max: 2.5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 1
+        overrides:
+          massOverride: 1000
+      - element: CarbonDioxide
+        weight: 1

@@ -1,0 +1,47 @@
+tags:
+  - AllowExceedNodeBorders
+  - PreventAmbientMobsInFeature
+shape: ShortWide
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 10.1
+  max: 10.5
+internalMobs:
+  - type: Oxyfern
+    count:
+      min: 1
+      max: 2
+  - type: ForestTree
+    count:
+      min: 2
+      max: 4
+  - type: LightBug
+    count:
+      min: 0
+      max: 1
+  - type: LeafyPlant
+    count:
+      min: 1
+      max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Oxygen
+        weight: 0.5
+      - element: CarbonDioxide
+        weight: 0.5
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SandStone
+        weight: 2
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Dirt
+        weight: 5
+      - element: SandStone
+        weight: 1

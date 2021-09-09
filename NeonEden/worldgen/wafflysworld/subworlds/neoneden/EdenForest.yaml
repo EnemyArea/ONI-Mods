@@ -1,0 +1,37 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Room
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 8
+pdWeight: 2
+sampleBehaviour: PoissonDisk
+borderOverride: rocky
+biomes:
+  - name: biomes/GaiaWoods/Basic
+    weight: 1
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - Squirrel          
+tags:
+  - IgnoreCaveOverride
+pointsOfInterest:
+  geysers_a:
+    - poi_EdenForestSpring
+features:
+  - type: features/forest/SmallLake
+  - type: features/neoneden/OxyfernCave
+  - type: features/neoneden/PhosphoriteVein
+  - type: features/neoneden/AlgaePatch
+  - type: features/neoneden/CoalLump
+# featureTemplates:
+  # feature_geyser_generic: 2
+zoneType: Forest

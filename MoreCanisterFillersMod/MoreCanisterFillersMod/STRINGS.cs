@@ -1,5 +1,4 @@
-﻿using System;
-using STRINGS;
+﻿using STRINGS;
 
 namespace MoreCanisterFillersMod
 {

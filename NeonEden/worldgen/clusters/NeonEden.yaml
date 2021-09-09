@@ -1,0 +1,14 @@
+name: STRINGS.CLUSTER_NAMES.DEFAULT.NAME
+description: STRINGS.CLUSTER_NAMES.DEFAULT.DESCRIPTION
+coordinatePrefix: EDEN-A
+#forbiddenDlcId: EXPANSION1_ID
+
+difficulty: 2
+menuOrder: 2
+
+startWorldIndex: 0
+worldPlacements:
+- world: worlds/NeonEden
+  allowedRings:
+    min: 0
+    max: 0

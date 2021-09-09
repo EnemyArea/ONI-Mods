@@ -1,0 +1,26 @@
+biomeNoise: noise/Default
+temperatureRange: HumanWarm
+minChildCount: 2
+pdWeight: 2.5
+density:
+  min: 35
+  max: 45
+avoidRadius: 50.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/GaiaBadland/Trove
+    weight: 1
+    tags:
+      - CactusPlant
+      - CactusPlantSeed
+features:
+  - type: features/neoneden/CactusCave
+  - type: features/neoneden/LimeLump
+pointsOfInterest:
+  geysers_a:
+    - poi_EdenBadlandsSatelite1
+tags:
+  - IgnoreCaveOverride
+# featureTemplates:
+  # feature_geyser_generic: 2
+zoneType: Sandstone

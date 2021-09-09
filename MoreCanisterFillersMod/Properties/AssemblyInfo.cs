@@ -1,9 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Runtime.Versioning;
 
 [assembly: AssemblyVersion("2020.4.21.33085")]
 [assembly: AssemblyTitle("MoreCanisterFillers")]

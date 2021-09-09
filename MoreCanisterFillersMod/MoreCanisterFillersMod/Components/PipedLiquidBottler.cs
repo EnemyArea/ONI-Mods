@@ -1,6 +1,5 @@
 ﻿#region
 
-using MoreCanisterFillersMod.Components;
 using UnityEngine;
 
 #endregion

@@ -2,7 +2,6 @@
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using CaiLib.Logger;
 using Newtonsoft.Json;
 
 namespace CaiLib.Config

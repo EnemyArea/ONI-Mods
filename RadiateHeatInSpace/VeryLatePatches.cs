@@ -1,7 +1,4 @@
-﻿using HarmonyLib;
-using UnityEngine;
-
-namespace RadiateHeatInSpace
+﻿namespace RadiateHeatInSpace
 {
     //public static class VeryLatePatches
     //{

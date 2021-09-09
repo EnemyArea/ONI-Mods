@@ -1,0 +1,32 @@
+biomeNoise: noise/subworldForest
+temperatureRange: HumanWarm
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 4
+pdWeight: 1
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/GaiaWoods/Basic
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - Squirrel          
+tags:
+  - IgnoreCaveOverride
+pointsOfInterest:
+  geysers_a:
+    - poi_EdenHotForestGasVent
+features:
+  - type: features/forest/SmallLake
+# featureTemplates:
+  # feature_geyser_generic: 2
+zoneType: Forest

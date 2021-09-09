@@ -1,0 +1,55 @@
+biomeNoise: noise/Sandstone
+temperatureRange: Room
+tags:
+  - IgnoreCaveOverride
+density:
+  min: 35
+  max: 45
+avoidRadius: 50.0
+pdWeight: 2
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: rocky
+biomes:
+  - name: biomes/GaiaSoil/Basic
+    weight: 4
+    tags:
+      - LightBug
+      - PrickleGrass
+      - PrickleGrassSeed
+      - Hatch
+      - HatchBuried  
+      - BasicSingleHarvestPlantSeed
+      - BasicSingleHarvestPlant
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+      - Oxyfern
+  - name: biomes/GaiaSoil/Metal_CO2
+    weight: 2
+    tags:   
+      - Hatch
+      - HatchBuried
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+      - Oxyfern
+  - name: biomes/GaiaSoil/Basic_CO2
+    weight: 1
+    tags:
+      - Hatch
+      - HatchBuried
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+      - Oxyfern
+pointsOfInterest:
+  geysers_a:
+    - poi_EdenMeadowSpring
+features:
+  - type: features/sedimentary/SmallEmptyLake
+  - type: features/sedimentary/MetalVacuumBlob
+  - type: features/neoneden/PhosphoriteVein
+  - type: features/neoneden/CoalLump
+  - type: features/neoneden/ArborGrove
+featureTemplates:
+  # feature_geyser_generic: 2
+zoneType: Sandstone

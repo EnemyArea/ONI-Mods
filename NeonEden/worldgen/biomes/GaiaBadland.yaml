@@ -1,0 +1,44 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    Trove:
+    - content: Vacuum
+      bandSize: 0.1
+    - content: Granite
+      bandSize: 0.2
+    - content: Obsidian
+      bandSize: 0.2
+    - content: Granite
+      bandSize: 0.2
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Carbon
+      bandSize: 0.04
+    - content: Granite
+      bandSize: 0.2
+    - content: IgneousRock
+      bandSize: 0.1
+    - content: Granite
+      bandSize: 0.2
+    - content: Iron
+      bandSize: 0.04
+    - content: Copper
+      bandSize: 0.03
+    - content: Gold
+      bandSize: 0.02
+    - content: Aluminum
+      bandSize: 0.05
+    - content: Tungsten
+      bandSize: 0.01
+    - content: Obsidian
+      bandSize: 0.2
+    - content: Granite
+      bandSize: 0.2
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Granite
+      bandSize: 0.2
+    - content: IgneousRock
+      bandSize: 0.1
