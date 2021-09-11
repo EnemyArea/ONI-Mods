@@ -19,7 +19,6 @@ namespace NeonEden
 			ModUtil.RegisterForTranslation(typeof(NeonEdenPatch));
 
             var sprite = Assembly.GetExecutingAssembly().GetManifestResourceStream("NeonEden." + text + ".dds");
-            Debug.Log(sprite == null ? "NeonEden." + text + ".dds is null" : "NeonEden." + text + ".dds");
 
             Sprite value = Sprites.CreateSpriteDXT5(sprite, 512, 512);
             Assets.Sprites.Add(text, value);

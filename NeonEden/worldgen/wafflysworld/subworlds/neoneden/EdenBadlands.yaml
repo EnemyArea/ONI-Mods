@@ -16,11 +16,14 @@ biomes:
 features:
   - type: features/neoneden/CactusCave
   - type: features/neoneden/LimeLump
-pointsOfInterest:
-  geysers_a:
-    - poi_EdenBadlandsSatelite1
+subworldTemplateRules:
+  - names:
+        - poi/poi_EdenBadlandsSatelite1
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 tags:
   - IgnoreCaveOverride
-# featureTemplates:
-  # feature_geyser_generic: 2
 zoneType: Sandstone

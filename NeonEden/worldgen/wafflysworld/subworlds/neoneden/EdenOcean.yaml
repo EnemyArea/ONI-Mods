@@ -31,12 +31,18 @@ features:
 tags:
   - IgnoreCaveOverride
   - River
-pointsOfInterest:
-  geysers_a:
-    - poi_ocean_geyser_saltwater
-  ruins_a:
-    - poi_ladder_tunnel
-    - poi_dining_room
+subworldTemplateRules:
+  - names:
+        - poi/poi_ocean_geyser_saltwater
+    listRule: TryOne
+  - names:
+        - poi/poi_ladder_tunnel
+        - poi/poi_dining_room
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 featureTemplates:
   # feature_geyser_generic: 2
 zoneType: Ocean

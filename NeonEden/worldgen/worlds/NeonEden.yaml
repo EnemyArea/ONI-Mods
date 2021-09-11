@@ -1,9 +1,7 @@
 name: STRINGS.WORLDS.NEON_EDEN.NAME
 description: STRINGS.WORLDS.NEON_EDEN.DESCRIPTION
-spriteName: Asteroid_NeonEden
-coordinatePrefix: EDEN-A
-difficulty: 0
-tier: 0
+asteroidIcon: Asteroid_NeonEden
+#disableWorldTraits: true
 
 worldsize:
   X: 384
@@ -28,17 +26,13 @@ subworldFiles:
   - name: wafflysworld/subworlds/neoneden/EdenOcean
   - name: wafflysworld/subworlds/neoneden/EdenOceanDeep
   - name: wafflysworld/subworlds/neoneden/EdenBadlands
-  - name: subworlds/Impenetrable
   - name: subworlds/magma/Bottom
   - name: wafflysworld/subworlds/neoneden/EdenOilPockets
   - name: subworlds/space/Space
   - name: wafflysworld/subworlds/neoneden/EdenSurface
 
 startSubworldName: wafflysworld/subworlds/neoneden/EdenMeadowStart
-startingBaseTemplate: sandstoneBase
-
-globalFeatureTemplates:
-  feature_geyser_generic: 24
+startingBaseTemplate: bases/sandstoneBase
 
 # Rivers:
 #   - River
@@ -108,15 +102,17 @@ unknownCellsAllowedSubworlds:
       - wafflysworld/subworlds/neoneden/EdenHotMarsh
       - wafflysworld/subworlds/neoneden/EdenJungle
       - wafflysworld/subworlds/neoneden/EdenOceanDeep
+  # Space
   - tagcommand: AtTag
     tag: AtSurface
     command: Replace
     subworldNames:
       - subworlds/space/Space
+  # Surface
   - tagcommand: DistanceFromTag
     tag: AtSurface
     minDistance: 1
-    maxDistance: 2
+    maxDistance: 1
     command: Replace
     subworldNames:
       - wafflysworld/subworlds/neoneden/EdenSurface
@@ -129,3 +125,25 @@ unknownCellsAllowedSubworlds:
       - wafflysworld/subworlds/neoneden/EdenHotMarsh
       - wafflysworld/subworlds/neoneden/EdenFrozen
       - wafflysworld/subworlds/neoneden/EdenRust      
+worldTemplateRules:      
+  # Gravitas
+  - names:
+    - poi/poi_gravitas
+    listRule: GuaranteeOne
+    priority: 500
+    allowExtremeTemperatureOverlap: true
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - wafflysworld/subworlds/neoneden/EdenSurface
+  # Generic Geysers
+  - names:
+    - geysers/generic
+    listRule: TryOne
+    times: 24
+    ruleId: GenericGeysers
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning

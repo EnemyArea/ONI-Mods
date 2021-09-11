@@ -22,10 +22,15 @@ features:
 tags:
   - IgnoreCaveOverride
   - River
-pointsOfInterest:
-  ruins_a:
-    - poi_ladder_tunnel
-    - poi_dining_room
+subworldTemplateRules:
+  - names:
+        - poi/poi_ladder_tunnel
+        - poi/poi_dining_room
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 featureTemplates:
   # feature_geyser_generic: 2
 zoneType: Ocean

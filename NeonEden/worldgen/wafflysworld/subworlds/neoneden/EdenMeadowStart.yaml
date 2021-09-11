@@ -44,9 +44,7 @@ centralFeature:
   type: features/generic/StartLocation
 features:
   - type: features/sedimentary/SmallLake
-# - type: features/sedimentary/MetalVacuumBlob
   - type: features/sedimentary/FlatLake
-# - type: features/sedimentary/MediumLake  
   - type: features/neoneden/PhosphoriteVein
   - type: features/neoneden/CoalLump
   - type: features/neoneden/ArborGrove

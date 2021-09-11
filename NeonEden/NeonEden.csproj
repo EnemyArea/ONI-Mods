@@ -105,9 +105,6 @@
     <None Include="worldgen\clusters\NeonEden.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="worldgen\clusters\NeonEdenLite.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="worldgen\features\neoneden\AlgaePatch.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -133,57 +130,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="worldgen\features\neoneden\VastCavityPond.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteBadlands.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteForest.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteForestHot.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteForestMini.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteFrozen.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteHotMarsh.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteJungle.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteMeadow.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteMeadowMiniAlgae.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteMeadowMiniMetal.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteMeadowMiniWater.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteMeadowStart.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteOcean.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteOceanDeep.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteOilPockets.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteRust.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\wafflysworld\subworlds\neonedenlite\EdenLiteSurface.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="worldgen\wafflysworld\subworlds\neoneden\EdenBadlands.yaml">
@@ -238,9 +184,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="worldgen\worlds\NeonEden.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="worldgen\worlds\NeonEdenLite.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

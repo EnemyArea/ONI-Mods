@@ -26,37 +26,47 @@ features:
   - type: features/frozen/SandGeode
 tags:
   - IgnoreCaveOverride
-pointsOfInterest:
-   heatsinks_a:
-    - poi_ice_heatsink_a
-    - poi_ice_heatsink_b
-    - poi_ice_heatsink_c
-    - poi_ice_heatsink_d
-   ruins_a:
-    - poi_ice_lab_basement
-    - poi_ice_lab_splitroom
-    - poi_ice_frag_vendingmachine
-    - poi_ice_frag_lockers
-   heatsinks_b:
-    - poi_ice_heatsink_a
-    - poi_ice_heatsink_b
-    - poi_ice_heatsink_c
-    - poi_ice_heatsink_d
-   ruins_b:
-    - poi_ice_lab_basement
-    - poi_ice_lab_splitroom
-    - poi_ice_frag_vendingmachine
-    - poi_ice_frag_lockers
-   heatsinks_c:
-    - poi_ice_heatsink_a
-    - poi_ice_heatsink_b
-    - poi_ice_heatsink_c
-    - poi_ice_heatsink_d
-   ruins_c:
-    - poi_ice_lab_basement
-    - poi_ice_lab_splitroom
-    - poi_ice_frag_vendingmachine
-    - poi_ice_frag_lockers
+subworldTemplateRules:
+  - names:
+        - poi/frozen/heatsink_a
+        - poi/frozen/heatsink_b
+        - poi/frozen/heatsink_c
+        - poi/frozen/heatsink_d
+    listRule: TryOne
+  - names:
+        - poi/frozen/lab_basement
+        - poi/frozen/lab_splitroom
+        - poi/frozen/frag_vendingmachine
+        - poi/frozen/frag_lockers
+    listRule: TryOne
+  - names:
+        - poi/frozen/heatsink_a
+        - poi/frozen/heatsink_b
+        - poi/frozen/heatsink_c
+        - poi/frozen/heatsink_d
+    listRule: TryOne
+  - names:
+        - poi/frozen/lab_basement
+        - poi/frozen/lab_splitroom
+        - poi/frozen/frag_vendingmachine
+        - poi/frozen/frag_lockers
+    listRule: TryOne
+  - names:
+        - poi/frozen/heatsink_a
+        - poi/frozen/heatsink_b
+        - poi/frozen/heatsink_c
+        - poi/frozen/heatsink_d
+    listRule: TryOne
+  - names:
+        - poi/frozen/lab_basement
+        - poi/frozen/lab_splitroom
+        - poi/frozen/frag_vendingmachine
+        - poi/frozen/frag_lockers
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 # featureTemplates:
   # feature_geyser_generic: 2
 zoneType: FrozenWastes

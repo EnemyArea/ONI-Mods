@@ -2,9 +2,9 @@ biomeNoise: noise/Sandstone
 temperatureRange: Room
 pdWeight: 0.5
 density:
-  min: 65
-  max: 65
-avoidRadius: 65.0
+  min: 12
+  max: 30
+avoidRadius: 30.0
 doAvoidPoints: false
 dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
@@ -25,5 +25,4 @@ tags:
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
   - StartWorld
-pointsOfInterest:
 zoneType: Sandstone

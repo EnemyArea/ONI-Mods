@@ -23,9 +23,14 @@ biomes:
       - Squirrel          
 tags:
   - IgnoreCaveOverride
-pointsOfInterest:
-  geysers_a:
-    - poi_EdenForestSpring
+subworldTemplateRules:
+  - names:
+      - poi/poi_EdenForestSpring
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 features:
   - type: features/forest/SmallLake
   - type: features/neoneden/OxyfernCave

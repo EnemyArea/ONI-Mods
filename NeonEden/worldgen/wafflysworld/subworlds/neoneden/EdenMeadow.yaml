@@ -41,9 +41,14 @@ biomes:
       - BasicForagePlant
       - BasicForagePlantPlanted
       - Oxyfern
-pointsOfInterest:
-  geysers_a:
-    - poi_EdenMeadowSpring
+subworldTemplateRules:
+  - names:
+      - poi/poi_EdenMeadowSpring
+    listRule: TryOne      
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 features:
   - type: features/sedimentary/SmallEmptyLake
   - type: features/sedimentary/MetalVacuumBlob

@@ -32,4 +32,9 @@ features:
   - type: features/neoneden/CoalLump
 # featureTemplates:
   # feature_geyser_generic: 2
+subworldTemplateRules:
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2   
 zoneType: Forest

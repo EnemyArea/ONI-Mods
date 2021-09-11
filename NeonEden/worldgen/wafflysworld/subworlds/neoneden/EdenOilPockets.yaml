@@ -23,28 +23,37 @@ features:
   #- type: features/oilpockets/Cavity
   - type: features/neoneden/VastCavityPond
   - type: features/neoneden/RichDiamondClump 
-pointsOfInterest:
- geysers_a:
-  - poi_oilpockets_geyser_a
-  - poi_oilpockets_geyser_b
-  - poi_oilpockets_geyser_c    
- ruins_a:
-  - poi_oil_switchdoor
-  - poi_oil_six_switch_door
- geysers_b:
-  - poi_oilpockets_geyser_d
-  - poi_oilpockets_geyser_e
-  - poi_oilpockets_geyser_f
- ruins_b:
-  - poi_oil_switchdoor
-  - poi_oil_six_switch_door
- geysers_c:
-  - poi_oilpockets_geyser_a
-  - poi_oilpockets_geyser_b
-  - poi_oilpockets_geyser_c
-  - poi_oilpockets_geyser_d
-  - poi_oilpockets_geyser_e
-  - poi_oilpockets_geyser_f
+subworldTemplateRules:
+  - names:
+    - poi/oil/oilpockets_geyser_a
+    - poi/oil/oilpockets_geyser_b
+    - poi/oil/oilpockets_geyser_c  
+    listRule: TryOne  
+  - names:
+    - poi/poi_oil_switchdoor
+    - poi/poi_oil_six_switch_door
+    listRule: TryOne
+  - names:
+    - poi/oil/oilpockets_geyser_d
+    - poi/oil/oilpockets_geyser_e
+    - poi/oil/oilpockets_geyser_f
+    listRule: TryOne
+  - names:
+    - poi/poi_oil_switchdoor
+    - poi/poi_oil_six_switch_door
+    listRule: TryOne
+  - names:
+    - poi/oil/oilpockets_geyser_a
+    - poi/oil/oilpockets_geyser_b
+    - poi/oil/oilpockets_geyser_c
+    - poi/oil/oilpockets_geyser_d
+    - poi/oil/oilpockets_geyser_e
+    - poi/oil/oilpockets_geyser_f
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 tags:
   - IgnoreCaveOverride
 featureTemplates:

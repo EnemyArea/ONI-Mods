@@ -22,9 +22,14 @@ biomes:
       - Squirrel          
 tags:
   - IgnoreCaveOverride
-pointsOfInterest:
-  geysers_a:
-    - poi_EdenHotForestGasVent
+subworldTemplateRules:
+  - names:
+      - poi/poi_EdenHotForestGasVent
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 features:
   - type: features/forest/SmallLake
 # featureTemplates:

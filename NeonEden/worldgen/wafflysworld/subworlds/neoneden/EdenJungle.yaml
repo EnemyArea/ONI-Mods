@@ -37,36 +37,45 @@ biomes:
       - LeafyPlantSeed
 tags:
   - IgnoreCaveOverride
-pointsOfInterest:
-  geysers_a:
-    - poi_jungle_geyser_steam 
-  geysers_b:
-    - poi_jungle_geyser_methane
-    - poi_jungle_geyser_chlorine
-  ruins_a:    
-    - poi_jungle_lab_poolbottom
-    - poi_jungle_buttongate
-    - poi_jungle_lab_vinetank
-    - poi_jungle_lab_daytimer
-    - poi_jungle_frag_lightbugs
-    - poi_jungle_frag_lockers
-    - poi_jungle_oxylite_spiral
-  ruins_b:    
-    - poi_jungle_lab_poolbottom
-    - poi_jungle_buttongate
-    - poi_jungle_lab_vinetank
-    - poi_jungle_lab_daytimer
-    - poi_jungle_frag_lightbugs
-    - poi_jungle_frag_lockers
-    - poi_jungle_oxylite_spiral
-  ruins_c:    
-    - poi_jungle_lab_poolbottom
-    - poi_jungle_buttongate
-    - poi_jungle_lab_vinetank
-    - poi_jungle_lab_daytimer
-    - poi_jungle_frag_lightbugs
-    - poi_jungle_frag_lockers
-    - poi_jungle_oxylite_spiral
+subworldTemplateRules:
+  - names:
+        - poi/jungle/geyser_steam 
+    listRule: TryOne
+  - names:
+        - poi/jungle/geyser_methane
+        - poi/jungle/geyser_chlorine
+    listRule: TryOne
+  - names:
+        - poi/jungle/lab_poolbottom
+        - poi/jungle/buttongate
+        - poi/jungle/lab_vinetank
+        - poi/jungle/lab_daytimer
+        - poi/jungle/frag_lightbugs
+        - poi/jungle/frag_lockers
+        - poi/jungle/oxylite_spiral
+    listRule: TryOne
+  - names:
+        - poi/jungle/lab_poolbottom
+        - poi/jungle/buttongate
+        - poi/jungle/lab_vinetank
+        - poi/jungle/lab_daytimer
+        - poi/jungle/frag_lightbugs
+        - poi/jungle/frag_lockers
+        - poi/jungle/oxylite_spiral
+    listRule: TryOne
+  - names:
+        - poi/jungle/lab_poolbottom
+        - poi/jungle/buttongate
+        - poi/jungle/lab_vinetank
+        - poi/jungle/lab_daytimer
+        - poi/jungle/frag_lightbugs
+        - poi/jungle/frag_lockers
+        - poi/jungle/oxylite_spiral
+    listRule: TryOne
+  - names:
+        - geysers/generic
+    listRule: TrySome
+    someCount: 2
 # featureTemplates:
   # feature_geyser_generic: 2
 zoneType: ToxicJungle
