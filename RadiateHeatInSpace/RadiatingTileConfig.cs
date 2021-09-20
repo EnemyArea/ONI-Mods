@@ -49,7 +49,6 @@ namespace RadiateHeatInSpace
             def.TileLayer = ObjectLayer.FoundationTile;
             def.SceneLayer = Grid.SceneLayer.TileMain;
             def.isKAnimTile = true;
-            def.isSolidTile = true;
             return def;
         }
 
