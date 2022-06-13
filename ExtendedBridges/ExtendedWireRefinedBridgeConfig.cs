@@ -1,33 +1,36 @@
-﻿using UnityEngine;
-using TUNING;
+﻿using TUNING;
+using UnityEngine;
 
 // Done
-public class ExtendedWireRefinedBridgeConfig : ExtendedWireBridgeConfig
+namespace ExtendedBridges
 {
-    protected override string GetID()
+    public class ExtendedWireRefinedBridgeConfig : ExtendedWireBridgeConfig
     {
-        return "ExtendedWireRefinedBridge";
-    }
-
-    public override BuildingDef CreateBuildingDef()
-    {
-        var buildingDef = base.CreateBuildingDef();
-        buildingDef.AnimFiles = new KAnimFile[]
+        protected override string GetID()
         {
-            Assets.GetAnim("utilityelectricbridgeconductive_kanim")
-        };
-        buildingDef.Mass = BUILDINGS.CONSTRUCTION_MASS_KG.TIER0;
-        buildingDef.MaterialCategory = MATERIALS.REFINED_METALS;
-        GeneratedBuildings.RegisterWithOverlay(OverlayScreen.WireIDs, buildingDef.PrefabID);
-        return buildingDef;
-    }
+            return "ExtendedWireRefinedBridge";
+        }
 
-    protected override WireUtilityNetworkLink AddNetworkLink(GameObject go)
-    {
-        var wireUtilityNetworkLink = base.AddNetworkLink(go);
-        wireUtilityNetworkLink.maxWattageRating = Wire.WattageRating.Max2000;
-        return wireUtilityNetworkLink;
-    }
+        public override BuildingDef CreateBuildingDef()
+        {
+            var buildingDef = base.CreateBuildingDef();
+            buildingDef.AnimFiles = new KAnimFile[]
+            {
+                Assets.GetAnim("utilityelectricbridgeconductive_kanim")
+            };
+            buildingDef.Mass = BUILDINGS.CONSTRUCTION_MASS_KG.TIER0;
+            buildingDef.MaterialCategory = MATERIALS.REFINED_METALS;
+            GeneratedBuildings.RegisterWithOverlay(OverlayScreen.WireIDs, buildingDef.PrefabID);
+            return buildingDef;
+        }
 
-    public new const string ID = "ExtendedWireRefinedBridge";
+        protected override WireUtilityNetworkLink AddNetworkLink(GameObject go)
+        {
+            var wireUtilityNetworkLink = base.AddNetworkLink(go);
+            wireUtilityNetworkLink.maxWattageRating = Wire.WattageRating.Max2000;
+            return wireUtilityNetworkLink;
+        }
+
+        public new const string ID = "ExtendedWireRefinedBridge";
+    }
 }
