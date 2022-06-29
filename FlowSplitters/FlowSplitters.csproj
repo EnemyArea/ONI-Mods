@@ -121,10 +121,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod_info.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)preview.png" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)anim" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetPath)" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)mod.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)mod_info.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)preview.png" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)anim" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

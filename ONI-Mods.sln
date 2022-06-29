@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeonEden", "NeonEden\NeonEd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowSplitters", "FlowSplitters\FlowSplitters.csproj", "{BF1E5AEE-570E-4CC8-8F8C-AE96731C4ACA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceWaterPumpConsumption", "BalanceWaterPumpConsumption\BalanceWaterPumpConsumption.csproj", "{5FAC918E-6588-4335-A019-B4DC2808AE7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BF1E5AEE-570E-4CC8-8F8C-AE96731C4ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF1E5AEE-570E-4CC8-8F8C-AE96731C4ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF1E5AEE-570E-4CC8-8F8C-AE96731C4ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAC918E-6588-4335-A019-B4DC2808AE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAC918E-6588-4335-A019-B4DC2808AE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAC918E-6588-4335-A019-B4DC2808AE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAC918E-6588-4335-A019-B4DC2808AE7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

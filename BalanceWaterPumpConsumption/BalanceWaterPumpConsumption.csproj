@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B955C0FE-0E03-4790-8ED5-0EF9C89A4864}</ProjectGuid>
+    <ProjectGuid>{5FAC918E-6588-4335-A019-B4DC2808AE7F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtendedBridges</RootNamespace>
-    <AssemblyName>ExtendedBridges</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <RootNamespace>BalanceWaterPumpConsumption</RootNamespace>
+    <AssemblyName>BalanceWaterPumpConsumption</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,18 +21,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
     <Reference Include="0Harmony">
       <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
@@ -42,26 +43,25 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtendedBridges.cs" />
-    <Compile Include="ExtendedSolidConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLogicWireBridgeConfig.cs" />
-    <Compile Include="ExtendedWireRefinedBridgeConfig.cs" />
-    <Compile Include="ExtendedWireBridgeConfig.cs" />
-    <Compile Include="ExtendedGasConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLiquidConduitBridgeConfig.cs" />
-    <Compile Include="ExtendedLogicRibbonBridgeConfig.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalanceWaterPumpConsumption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="LiquidFilterConfigMod.cs" />
+    <Compile Include="LiquidMiniPumpConfigMod.cs" />
+    <Compile Include="LiquidPumpConfigMod.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.yaml">
@@ -69,6 +69,10 @@
     </None>
     <None Include="mod_info.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -78,14 +82,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetPath)" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
 xcopy "$(TargetDir)mod.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
 xcopy "$(TargetDir)mod_info.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)preview.jpg" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-</PostBuildEvent>
+xcopy "$(TargetDir)preview.jpg" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

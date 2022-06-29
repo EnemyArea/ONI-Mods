@@ -216,13 +216,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod_info.yaml" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)preview.jpg" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)templates" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\templates" /E /I /Y
-xcopy "$(TargetDir)\worldgen" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\worldgen" /E /I /Y
-xcopy "$(TargetDir)anim" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I /Y
-xcopy "$(TargetDir)dlc" "D:\Eigene Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\dlc" /E /I /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetPath)" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)mod.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)mod_info.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)preview.jpg" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
+xcopy "$(TargetDir)templates" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\templates" /E /I /Y
+xcopy "$(TargetDir)\worldgen" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\worldgen" /E /I /Y
+xcopy "$(TargetDir)anim" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I /Y
+xcopy "$(TargetDir)dlc" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\dlc" /E /I /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>
