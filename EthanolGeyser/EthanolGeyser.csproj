@@ -35,16 +35,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>..\Libs\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Libs\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\Libs\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,7 +57,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\SteamLibrary\SteamApps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Libs\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -88,11 +93,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)mod_info.yaml" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)preview.png" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\" /S /Y
-xcopy "$(TargetDir)anim" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\anim" /E /I /Y
-xcopy "$(TargetDir)templates" "D:\OneDrive\Dokumente\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)\templates" /E /I /Y</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Debug "..\..\..\Libs\pdb2mdb.exe" "$(TargetDir)$(TargetFileName)"
+
+powershell.exe -command "&amp; { $dest = [Environment]::GetFolderPath('MyDocuments')+'\Klei\OxygenNotIncluded\mods\dev\EnemyArea.$(ProjectName)'; robocopy $(TargetDir) $dest /mir /xf *.dll.config *.pdb }"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>rd /S /Q "$(TargetDir)"</PreBuildEvent>
   </PropertyGroup>
 </Project>
