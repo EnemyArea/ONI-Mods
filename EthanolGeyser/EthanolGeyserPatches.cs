@@ -19,7 +19,7 @@ namespace EthanolGeyser
         [HarmonyPatch(typeof(Worlds), "UpdateWorldCache")]
         public class Worlds_UpdateWorldCache_Patch
         {
-            private static void Postfix(Worlds __instance, string path, string prefix, ISet<string> referencedWorlds, List<YamlIO.Error> errors)
+            private static void Postfix(Worlds __instance, ISet<string> referencedWorlds, List<YamlIO.Error> errors)
             {
                 var json = "{\"names\":[\"poi/poi_rust_geyser_ethanol\"],\"listRule\":5,\"someCount\":3,\"moreCount\":0,\"times\":3,\"priority\":10,\"allowDuplicates\":true,\"allowExtremeTemperatureOverlap\":false,\"useRelaxedFiltering\":false,\"allowedCellsFilter\":[{\"tagcommand\":3,\"tag\":\"AtDepths\",\"minDistance\":2,\"maxDistance\":10,\"command\":1,\"temperatureRanges\":[],\"zoneTypes\":[],\"subworldNames\":[]},{\"tagcommand\":0,\"tag\":null,\"minDistance\":0,\"maxDistance\":0,\"command\":1,\"temperatureRanges\":[],\"zoneTypes\":[0],\"subworldNames\":[]},{\"tagcommand\":1,\"tag\":\"NoGlobalFeatureSpawning\",\"minDistance\":0,\"maxDistance\":0,\"command\":4,\"temperatureRanges\":[],\"zoneTypes\":[],\"subworldNames\":[]}]}";
 
